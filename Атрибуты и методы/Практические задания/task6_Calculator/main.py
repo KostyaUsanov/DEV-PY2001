@@ -1,4 +1,12 @@
 class Calculator:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+    @staticmethod
+    def mul(a, b):
+        return a * b
+
     ...  # TODO написать статические методы
 
 

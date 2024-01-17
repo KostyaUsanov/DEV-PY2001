@@ -48,7 +48,7 @@ class Car:
         """
         ...
 
-    def discount_from_price(self, discount: (int, float))-> None:
+    def discount_from_price(self, discount: (int, float)) -> None:
         """Функция которая дает скидку если цена больше 5999999
 
         :param discount: размер скидки
@@ -91,7 +91,7 @@ class Model_car:
         if not isinstance(color, str):
             raise TypeError("Цвет машины должна быть типа str")  # вызываем ошибку
         self.color = color
-        if not isinstance(power, str):
+        if not isinstance(power, int):
             raise TypeError("Мощность машины должна быть типа int или float")  # вызываем ошибку
         self.power = power
 
@@ -145,6 +145,10 @@ class WeightAuto:
         Метод увеличивает вес последней загрузки машины.
 
        :param add_to_weight: Количество добавленного груза
+
+        >>> obj = WeightAuto()  # инициализация экземпляра класса
+        >>> obj.increment_add_to_weight(100)
+        3100
         """
         if not isinstance(add_to_weight, int):  # проверяем, что добавление груза к весу типа int или float
             raise TypeError("Добавление груза должны быть типа int или float")  # вызываем ошибку
@@ -152,6 +156,7 @@ class WeightAuto:
         if add_to_weight > self.max_weight:
             raise ValueError("Добавление груза не должно быть больше максимальной грузоподъемности")
         self.weight += add_to_weight
+        return self.weight
 
     def increment_del_to_weight(self, del_to_weight: (int, float)):
         """

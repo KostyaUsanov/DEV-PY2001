@@ -13,6 +13,8 @@ class Date:
         self.is_valid_date(self.day, self.month, self.year)
 
     def is_leap_year(self, year: int):
+
+
         """Проверяет, является ли год високосным"""
         ...  # TODO реализовать метод
 
