@@ -4,15 +4,15 @@ files:
   visible: true
   placeholders:
   - offset: 388
-    length: 62
+    length: 73
     placeholder_text: "...  # TODO c помощью super вызвать метод area базового кла\
       сса"
     initial_state:
       length: 62
       offset: 388
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: super().area()
   text: |
     class Rectangle:
@@ -52,5 +52,8 @@ files:
     50
     538.195520835486
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 28 Jan 2024 13:31:42 UTC"
 record: -1

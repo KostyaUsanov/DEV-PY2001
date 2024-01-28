@@ -39,8 +39,6 @@ class Library:     # TODO написать класс Library
         else:
             self.books = books
 
-    def add_book(self, book: Book):
-        self.books.append(book)
 
 
     def get_next_book_id(self):

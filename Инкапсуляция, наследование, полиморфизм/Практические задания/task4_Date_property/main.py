@@ -12,21 +12,66 @@ class Date:
 
         self.is_valid_date(self._day, self._month, self._year)
 
-    # TODO какой декоратор следует применить?
-    def is_leap_year(self, year: int) -> bool:
+    @staticmethod       # TODO какой декоратор следует применить?
+    def is_leap_year(year: int) -> bool:
         """Проверяет, является ли год високосным"""
-        ...  # TODO записать условие проверки високосного года
 
-    def get_max_day(self, month: int, year: int) -> int:
+        if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+            return True
+        else:
+            return False  # TODO записать условие проверки високосного года
+
+    @staticmethod
+    def get_max_day(month: int, year: int) -> int:
         """Возвращает максимальное количество дней в месяце для указанного года"""
-        ...  # TODO вернуть количество дней указанного месяца
+        if Date.is_leap_year(year):
+            data = Date.DAY_OF_MONTH[1]
+            return data[month]
+        else:
+            return Date.DAY_OF_MONTH[0][month]  # TODO вернуть количество дней указанного месяца
 
-    def is_valid_date(self, day: int, month: int, year: int) -> None:
-        """Проверяет, является ли дата корректной"""
-        ...  # TODO если указанный набор день, месяц и год неверны, то вызвать ошибку ValueError
+    @staticmethod
+    def is_valid_date(day: int, month: int, year: int) -> None:
+        if day > Date.get_max_day(month, year):
+            raise ValueError     # TODO если указанный набор день, месяц и год неверны, то вызвать ошибку ValueError
 
-    # TODO записать getter и setter для дня
+    @property
+    def day(self) -> int:
+        return self._day
 
-    # TODO записать getter и setter для месяца
+    @day.setter
+    def day(self, day: int) -> None:
+        if 0 <= day <= 31:
+            raise ValueError('ValueError')
+        if not isinstance(day, int):
+            raise TypeError('TypeError')
+        self._day = day       # TODO записать getter и setter для дня
 
-    # TODO записать getter и setter для года
+    @property
+    def month(self) -> int:
+        return self._month
+
+    @month.setter
+    def month(self, month: int) -> None:
+        if not isinstance(month, int):
+            raise TypeError('TypeError')
+        if 0 <= month < 12:
+            raise ValueError('ValueError')
+        self._month = month  # TODO записать getter и setter для месяца
+
+    @property
+    def year(self) -> int:
+        return self._year
+
+    @year.setter
+    def year(self, year: int) -> None:
+        if not isinstance(year, int):
+            raise TypeError('TypeError')
+        if year <= 0:
+            raise ValueError('ValueError')
+        self._year = year  # TODO записать getter и setter для года
+
+
+Date.is_valid_date(11, 1, 2000)
+
+

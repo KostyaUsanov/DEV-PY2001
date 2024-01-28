@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 675
+  - offset: 638
     length: 0
     placeholder_text: "...  # TODO реализовать метод"
     initial_state:
@@ -11,9 +11,9 @@ files:
       offset: 513
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '...'
-  - offset: 1000
+  - offset: 963
     length: 110
     placeholder_text: "...  # TODO используя атрибут класса DAY_OF_MONTH вернуть к\
       оличество дней в запрашиваемом месяце и году"
@@ -22,9 +22,9 @@ files:
       offset: 685
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '...'
-  - offset: 1254
+  - offset: 1278
     length: 34
     placeholder_text: "...  # TODO проверить валидность даты"
     initial_state:
@@ -32,7 +32,7 @@ files:
       offset: 913
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '...'
   text: |
     class Date:
@@ -64,6 +64,6 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 post_submission_on_open: true

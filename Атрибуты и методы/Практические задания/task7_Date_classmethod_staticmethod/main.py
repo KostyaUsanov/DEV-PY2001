@@ -4,8 +4,6 @@ class Date:
         (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31),  # обычный год
         (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)  # високосный
     )
-    a = [["1"], "afsfs"]
-    a[0][0]
     def __init__(self, day: int, month: int, year: int):
         self.day = day
         self.month = month
@@ -36,10 +34,12 @@ class Date:
 
 
                     # TODO используя атрибут класса DAY_OF_MONTH вернуть количество дней в запрашиваемом месяце и году
-    @classmethod
-    def is_valid_date(self, day: int, month: int, year: int):
+    @staticmethod
+    def is_valid_date(day: int, month: int, year: int):
         """Проверяет, является ли дата корректной"""
 
+        d = Date.is_valid_date(day, month, year)
+        return d
 
 
 

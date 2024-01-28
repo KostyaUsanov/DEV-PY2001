@@ -14,7 +14,7 @@ files:
       offset: 144
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       if not isinstance(capacity_volume, (int, float)):
                   raise TypeError
@@ -35,7 +35,7 @@ files:
       offset: 222
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       glass1 = Glass(200, 100)  # экземпляр класса
           glass2 = Glass(500, 50)  # экземпляр класса
@@ -47,7 +47,7 @@ files:
       offset: 279
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       incorrect_capacity_volume_type = ...
           incorrect_occupied_volume_value = ...
@@ -65,6 +65,6 @@ files:
 
         # TODO попробовать инициализировать не корректные объекты
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 post_submission_on_open: true
